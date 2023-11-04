@@ -33,13 +33,9 @@ public class TennisScoreCalculator
         {
             return "Thirty-All";
         }
-        else if (points == 3)
-        {
-            return "Deuce";
-        }
         else
         {
-            throw new ArgumentException("Invalid points value");
+            return "Deuce";
         }
     }
 

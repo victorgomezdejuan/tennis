@@ -33,4 +33,20 @@ public class TennisScoreCalculatorDrawScoreTests
         var score = calculator.Score(3, 3);
         Assert.Equal("Deuce", score);
     }
+
+    [Fact]
+    public void Deuce4()
+    {
+        var calculator = new TennisScoreCalculator();
+        var score = calculator.Score(4, 4);
+        Assert.Equal("Deuce", score);
+    }
+
+    [Fact]
+    public void Deuce5()
+    {
+        var calculator = new TennisScoreCalculator();
+        var score = calculator.Score(5, 5);
+        Assert.Equal("Deuce", score);
+    }
 }
