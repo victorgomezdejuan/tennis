@@ -7,7 +7,7 @@ public class TennisScoreCalculatorTests
     {
         var calculator = new TennisScoreCalculator();
         var score = calculator.Score(0, 0);
-        Assert.Equal("Love-All", score);
+        Assert.Equal("Love-Love", score);
     }
 
     [Fact]
@@ -32,5 +32,13 @@ public class TennisScoreCalculatorTests
         var calculator = new TennisScoreCalculator();
         var score = calculator.Score(3, 0);
         Assert.Equal("Forty-Love", score);
+    }
+
+    [Fact]
+    public void LoveFifteen()
+    {
+        var calculator = new TennisScoreCalculator();
+        var score = calculator.Score(0, 1);
+        Assert.Equal("Love-Fifteen", score);
     }
 }
