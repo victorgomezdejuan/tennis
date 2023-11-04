@@ -1,6 +1,6 @@
 namespace Tennis.Tests;
 
-public class TennisScoreCalculatorTests
+public class TennisScoreCalculatorSimpleScoreTests
 {
     [Fact]
     public void FifteenLove()
@@ -48,37 +48,5 @@ public class TennisScoreCalculatorTests
         var calculator = new TennisScoreCalculator();
         var score = calculator.Score(0, 3);
         Assert.Equal("Love-Forty", score);
-    }
-
-    [Fact]
-    public void LoveAll()
-    {
-        var calculator = new TennisScoreCalculator();
-        var score = calculator.Score(0, 0);
-        Assert.Equal("Love-All", score);
-    }
-
-    [Fact]
-    public void FifteenAll()
-    {
-        var calculator = new TennisScoreCalculator();
-        var score = calculator.Score(1, 1);
-        Assert.Equal("Fifteen-All", score);
-    }
-
-    [Fact]
-    public void ThirtyAll()
-    {
-        var calculator = new TennisScoreCalculator();
-        var score = calculator.Score(2, 2);
-        Assert.Equal("Thirty-All", score);
-    }
-
-    [Fact]
-    public void Deuce()
-    {
-        var calculator = new TennisScoreCalculator();
-        var score = calculator.Score(3, 3);
-        Assert.Equal("Deuce", score);
     }
 }
