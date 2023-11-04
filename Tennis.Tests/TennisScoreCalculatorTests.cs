@@ -57,4 +57,20 @@ public class TennisScoreCalculatorTests
         var score = calculator.Score(0, 3);
         Assert.Equal("Love-Forty", score);
     }
+
+    [Fact]
+    public void FifteenAll()
+    {
+        var calculator = new TennisScoreCalculator();
+        var score = calculator.Score(1, 1);
+        Assert.Equal("Fifteen-Fifteen", score);
+    }
+
+    [Fact]
+    public void ThirtyAll()
+    {
+        var calculator = new TennisScoreCalculator();
+        var score = calculator.Score(2, 2);
+        Assert.Equal("Thirty-Thirty", score);
+    }
 }
